@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "Employee": {
+      "title": "Employee",
+      "description": "Un empleado del salón",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "specialty": { "type": "string" },
+        "active": { "type": "boolean" }
+      },
+      "required": ["name", "specialty", "active"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Un servicio ofrecido (ej. Corte de pelo)",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "price": { "type": "number" },
+        "duration": { "type": "integer" }
+      },
+      "required": ["name", "price", "duration"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Una cita programada",
+      "type": "object",
+      "properties": {
+        "clientName": { "type": "string" },
+        "employeeId": { "type": "string" },
+        "serviceId": { "type": "string" },
+        "dateTime": { "type": "string" },
+        "status": { "type": "string", "enum": ["pendiente", "completada", "cancelada"] }
+      },
+      "required": ["clientName", "employeeId", "serviceId", "dateTime", "status"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Producto de belleza para la venta",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "price": { "type": "number" },
+        "stock": { "type": "integer" }
+      },
+      "required": ["name", "price", "stock"]
+    },
+    "Sale": {
+      "title": "Sale",
+      "description": "Registro de una venta",
+      "type": "object",
+      "properties": {
+        "items": { "type": "array" },
+        "total": { "type": "number" },
+        "date": { "type": "string" }
+      },
+      "required": ["items", "total", "date"]
+    }
+  },
+  "firestore": {
+    "employees": { "schema": "Employee", "description": "Colección de empleados" },
+    "services": { "schema": "Service", "description": "Colección de servicios" },
+    "appointments": { "schema": "Appointment", "description": "Colección de citas" },
+    "products": { "schema": "Product", "description": "Colección de productos" },
+    "sales": { "schema": "Sale", "description": "Colección de ventas" }
+  }
+}

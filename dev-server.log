@@ -1,0 +1,313 @@
+
+> glow-style-salon@0.1.0 dev
+> tsx server.ts
+
+Server running on http://0.0.0.0:3000
+Open http://localhost:3000 in your browser
+[2m10:37:54 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:37:54 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:38:05 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:38:08 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:42:13 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:42:15 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:45:41 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:45:42 p. m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\andre\beauty-team\src\App.tsx: Unexpected token, expected "," (705:6)
+
+[0m [90m 703 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 704 |[31m
+[31m[1m>[22m[31m[90m 705 |[31m       {[90m/* Grid de Estadísticas Compacto */[31m}
+ [90m     |[31m       [31m[1m^[22m[31m
+ [90m 706 |[31m       [33m<[31m[33mdiv[31m className[33m=[31m[32m"grid grid-cols-2 lg:grid-cols-4 gap-6"[31m[33m>[31m
+ [90m 707 |[31m          [33m<[31m[33mStatBox[31m label[33m=[31m[32m"Clientes"[31m value[33m=[31m{stats[33m?[31m[33m.[31mclients_count [33m?[31m[33m?[31m [35m0[31m} icon[33m=[31m{[33mUsers[31m} color[33m=[31m[32m"teal"[31m [33m/[31m[33m>[31m
+ [90m 708 |[31m          [33m<[31m[33mStatBox[31m label[33m=[31m[32m"Staff"[31m value[33m=[31m{stats[33m?[31m[33m.[31memployees_count [33m?[31m[33m?[31m [35m0[31m} icon[33m=[31m{[33mScissors[31m} color[33m=[31m[32m"teal"[31m [33m/[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/andre/beauty-team/src/App.tsx[39m:705:6
+[33m  714|          {stats?.low_stock > 0 && (
+  715|            <motion.div 
+  716|              initial={{ opacity: 0, scale: 0.9 }} 
+     |                                                   ^
+  717|              animate={{ opacity: 1, scale: 1 }}
+  718|              className="p-4 bg-red-50 dark:bg-red-900/20 border-2 border-red-100 dark:border-red-900/30 rounded-3xl flex items-center gap-4 text-red-600 dark:text-red-400"[39m
+      at toParseError (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parse-error.ts:95:45)
+      at TypeScriptParserMixin.raise (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\tokenizer\index.ts:1504:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\tokenizer\index.ts:1544:16)
+      at TypeScriptParserMixin.expect (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\util.ts:157:12)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:1801:14)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:1170:21)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\jsx\index.ts:583:22)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:742:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:721:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:683:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3893:20)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:417:14)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:429:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:384:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:301:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3764:22)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:226:23)
+      at callback (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:217:39)
+      at TypeScriptParserMixin.allowInAnd (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:3192:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:217:17)
+      at TypeScriptParserMixin.parseReturnStatement (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1115:28)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:543:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3220:20)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:482:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:431:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1444:16)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1417:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1385:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:2621:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:2590:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:2609:20)
+      at callback (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1695:12)
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:3171:14)
+      at TypeScriptParserMixin.parseFunction (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1693:10)
+      at TypeScriptParserMixin.parseFunctionStatement (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1080:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:525:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3220:20)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:482:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:419:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1443:16)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1417:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:229:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:203:25)
+      at TypeScriptParserMixin.parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\index.ts:83:25)
+      at TypeScriptParserMixin.parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:4354:20)
+      at parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\index.ts:86:38)
+      at parser (C:\Users\andre\beauty-team\node_modules\@babel\core\src\parser\index.ts:29:19)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\andre\beauty-team\node_modules\@babel\core\src\transformation\normalize-file.ts:50:24)
+      at normalizeFile.next (<anonymous>)
+[2m10:45:42 p. m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\andre\beauty-team\src\App.tsx: Unexpected token, expected "," (705:6)
+
+[0m [90m 703 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 704 |[31m
+[31m[1m>[22m[31m[90m 705 |[31m       {[90m/* Grid de Estadísticas Compacto */[31m}
+ [90m     |[31m       [31m[1m^[22m[31m
+ [90m 706 |[31m       [33m<[31m[33mdiv[31m className[33m=[31m[32m"grid grid-cols-2 lg:grid-cols-4 gap-6"[31m[33m>[31m
+ [90m 707 |[31m          [33m<[31m[33mStatBox[31m label[33m=[31m[32m"Clientes"[31m value[33m=[31m{stats[33m?[31m[33m.[31mclients_count [33m?[31m[33m?[31m [35m0[31m} icon[33m=[31m{[33mUsers[31m} color[33m=[31m[32m"teal"[31m [33m/[31m[33m>[31m
+ [90m 708 |[31m          [33m<[31m[33mStatBox[31m label[33m=[31m[32m"Staff"[31m value[33m=[31m{stats[33m?[31m[33m.[31memployees_count [33m?[31m[33m?[31m [35m0[31m} icon[33m=[31m{[33mScissors[31m} color[33m=[31m[32m"teal"[31m [33m/[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/andre/beauty-team/src/App.tsx[39m:705:6
+[33m  714|          {stats?.low_stock > 0 && (
+  715|            <motion.div 
+  716|              initial={{ opacity: 0, scale: 0.9 }} 
+     |                                                   ^
+  717|              animate={{ opacity: 1, scale: 1 }}
+  718|              className="p-4 bg-red-50 dark:bg-red-900/20 border-2 border-red-100 dark:border-red-900/30 rounded-3xl flex items-center gap-4 text-red-600 dark:text-red-400"[39m
+      at toParseError (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parse-error.ts:95:45)
+      at TypeScriptParserMixin.raise (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\tokenizer\index.ts:1504:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\tokenizer\index.ts:1544:16)
+      at TypeScriptParserMixin.expect (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\util.ts:157:12)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:1801:14)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:1170:21)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\jsx\index.ts:583:22)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:742:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:721:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:683:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3893:20)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:417:14)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:429:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:384:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:301:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3764:22)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:226:23)
+      at callback (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:217:39)
+      at TypeScriptParserMixin.allowInAnd (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:3192:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:217:17)
+      at TypeScriptParserMixin.parseReturnStatement (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1115:28)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:543:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3220:20)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:482:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:431:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1444:16)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1417:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1385:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:2621:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:2590:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:2609:20)
+      at callback (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1695:12)
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:3171:14)
+      at TypeScriptParserMixin.parseFunction (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1693:10)
+      at TypeScriptParserMixin.parseFunctionStatement (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1080:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:525:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3220:20)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:482:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:419:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1443:16)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1417:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:229:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:203:25)
+      at TypeScriptParserMixin.parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\index.ts:83:25)
+      at TypeScriptParserMixin.parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:4354:20)
+      at parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\index.ts:86:38)
+      at parser (C:\Users\andre\beauty-team\node_modules\@babel\core\src\parser\index.ts:29:19)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\andre\beauty-team\node_modules\@babel\core\src\transformation\normalize-file.ts:50:24)
+      at normalizeFile.next (<anonymous>)
+[2m10:45:42 p. m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\andre\beauty-team\src\App.tsx: Unexpected token, expected "," (705:6)
+
+[0m [90m 703 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 704 |[31m
+[31m[1m>[22m[31m[90m 705 |[31m       {[90m/* Grid de Estadísticas Compacto */[31m}
+ [90m     |[31m       [31m[1m^[22m[31m
+ [90m 706 |[31m       [33m<[31m[33mdiv[31m className[33m=[31m[32m"grid grid-cols-2 lg:grid-cols-4 gap-6"[31m[33m>[31m
+ [90m 707 |[31m          [33m<[31m[33mStatBox[31m label[33m=[31m[32m"Clientes"[31m value[33m=[31m{stats[33m?[31m[33m.[31mclients_count [33m?[31m[33m?[31m [35m0[31m} icon[33m=[31m{[33mUsers[31m} color[33m=[31m[32m"teal"[31m [33m/[31m[33m>[31m
+ [90m 708 |[31m          [33m<[31m[33mStatBox[31m label[33m=[31m[32m"Staff"[31m value[33m=[31m{stats[33m?[31m[33m.[31memployees_count [33m?[31m[33m?[31m [35m0[31m} icon[33m=[31m{[33mScissors[31m} color[33m=[31m[32m"teal"[31m [33m/[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/andre/beauty-team/src/App.tsx[39m:705:6
+[33m  714|          {stats?.low_stock > 0 && (
+  715|            <motion.div 
+  716|              initial={{ opacity: 0, scale: 0.9 }} 
+     |                                                   ^
+  717|              animate={{ opacity: 1, scale: 1 }}
+  718|              className="p-4 bg-red-50 dark:bg-red-900/20 border-2 border-red-100 dark:border-red-900/30 rounded-3xl flex items-center gap-4 text-red-600 dark:text-red-400"[39m
+      at toParseError (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parse-error.ts:95:45)
+      at TypeScriptParserMixin.raise (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\tokenizer\index.ts:1504:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\tokenizer\index.ts:1544:16)
+      at TypeScriptParserMixin.expect (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\util.ts:157:12)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:1801:14)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:1170:21)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\jsx\index.ts:583:22)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:742:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:721:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:683:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3893:20)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:417:14)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:429:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:384:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:301:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3764:22)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:226:23)
+      at callback (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:217:39)
+      at TypeScriptParserMixin.allowInAnd (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:3192:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:217:17)
+      at TypeScriptParserMixin.parseReturnStatement (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1115:28)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:543:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3220:20)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:482:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:431:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1444:16)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1417:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1385:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:2621:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:2590:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:2609:20)
+      at callback (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1695:12)
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:3171:14)
+      at TypeScriptParserMixin.parseFunction (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1693:10)
+      at TypeScriptParserMixin.parseFunctionStatement (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1080:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:525:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3220:20)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:482:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:419:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1443:16)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1417:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:229:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:203:25)
+      at TypeScriptParserMixin.parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\index.ts:83:25)
+      at TypeScriptParserMixin.parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:4354:20)
+      at parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\index.ts:86:38)
+      at parser (C:\Users\andre\beauty-team\node_modules\@babel\core\src\parser\index.ts:29:19)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\andre\beauty-team\node_modules\@babel\core\src\transformation\normalize-file.ts:50:24)
+      at normalizeFile.next (<anonymous>)
+[2m10:45:42 p. m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\andre\beauty-team\src\App.tsx: Unexpected token, expected "," (705:6)
+
+[0m [90m 703 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 704 |[31m
+[31m[1m>[22m[31m[90m 705 |[31m       {[90m/* Grid de Estadísticas Compacto */[31m}
+ [90m     |[31m       [31m[1m^[22m[31m
+ [90m 706 |[31m       [33m<[31m[33mdiv[31m className[33m=[31m[32m"grid grid-cols-2 lg:grid-cols-4 gap-6"[31m[33m>[31m
+ [90m 707 |[31m          [33m<[31m[33mStatBox[31m label[33m=[31m[32m"Clientes"[31m value[33m=[31m{stats[33m?[31m[33m.[31mclients_count [33m?[31m[33m?[31m [35m0[31m} icon[33m=[31m{[33mUsers[31m} color[33m=[31m[32m"teal"[31m [33m/[31m[33m>[31m
+ [90m 708 |[31m          [33m<[31m[33mStatBox[31m label[33m=[31m[32m"Staff"[31m value[33m=[31m{stats[33m?[31m[33m.[31memployees_count [33m?[31m[33m?[31m [35m0[31m} icon[33m=[31m{[33mScissors[31m} color[33m=[31m[32m"teal"[31m [33m/[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/andre/beauty-team/src/App.tsx[39m:705:6
+[33m  714|          {stats?.low_stock > 0 && (
+  715|            <motion.div 
+  716|              initial={{ opacity: 0, scale: 0.9 }} 
+     |                                                   ^
+  717|              animate={{ opacity: 1, scale: 1 }}
+  718|              className="p-4 bg-red-50 dark:bg-red-900/20 border-2 border-red-100 dark:border-red-900/30 rounded-3xl flex items-center gap-4 text-red-600 dark:text-red-400"[39m
+      at toParseError (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parse-error.ts:95:45)
+      at TypeScriptParserMixin.raise (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\tokenizer\index.ts:1504:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\tokenizer\index.ts:1544:16)
+      at TypeScriptParserMixin.expect (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\util.ts:157:12)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:1801:14)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:1170:21)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\jsx\index.ts:583:22)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:742:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:721:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:683:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3893:20)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:417:14)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:429:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:384:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:301:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3764:22)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:226:23)
+      at callback (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:217:39)
+      at TypeScriptParserMixin.allowInAnd (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:3192:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:217:17)
+      at TypeScriptParserMixin.parseReturnStatement (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1115:28)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:543:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3220:20)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:482:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:431:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1444:16)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1417:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1385:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:2621:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:2590:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:2609:20)
+      at callback (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1695:12)
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\expression.ts:3171:14)
+      at TypeScriptParserMixin.parseFunction (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1693:10)
+      at TypeScriptParserMixin.parseFunctionStatement (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1080:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:525:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:3220:20)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:482:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:419:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1443:16)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:1417:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:229:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\statement.ts:203:25)
+      at TypeScriptParserMixin.parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\parser\index.ts:83:25)
+      at TypeScriptParserMixin.parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\plugins\typescript\index.ts:4354:20)
+      at parse (C:\Users\andre\beauty-team\node_modules\@babel\parser\src\index.ts:86:38)
+      at parser (C:\Users\andre\beauty-team\node_modules\@babel\core\src\parser\index.ts:29:19)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\andre\beauty-team\node_modules\@babel\core\src\transformation\normalize-file.ts:50:24)
+      at normalizeFile.next (<anonymous>)
+[2m10:46:36 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:53:43 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:54:13 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:54:20 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:56:32 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:56:32 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m11:04:32 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:04:52 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:05:12 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:06:47 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:06:48 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:08:59 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:09:22 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:16:44 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:16:44 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:20:39 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:20:40 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:21:27 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:21:52 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:24:15 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:25:17 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:28:30 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:30:13 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:30:16 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:30:19 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:30:56 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:33:14 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mpackage.json[22m
+[2m11:34:38 p. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mpackage.json[22m
+[2m11:59:35 p. m.[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m11:59:36 p. m.[22m [36m[1m[vite][22m[39m server restarted.
+[2m11:59:59 p. m.[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m11:59:59 p. m.[22m [36m[1m[vite][22m[39m server restarted.

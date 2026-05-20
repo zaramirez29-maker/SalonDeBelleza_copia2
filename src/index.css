@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+
+  /* Colores Personalizados */
+  --color-brand-primary: #5b8f86;
+  --color-brand-secondary: #173c36;
+  --color-brand-gold: #c9a46a;
+  --color-brand-accent: #e6c97b;
+  --color-brand-bg: #f3f0ea;
+}
+
+/* --- ESTILOS GLOBALES --- */
+body {
+  @apply bg-[#f3f0ea] text-[#173c36] font-sans transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-[#0d1614] text-[#f8fafc];
+}
+
+/* --- CLASES DE DISEÑO (GLASSMORPHISM) --- */
+.glass {
+  @apply bg-white/75 dark:bg-[#141d1a]/90 backdrop-blur-xl border border-white/70 dark:border-[#c9a46a]/20 shadow-sm transition-all duration-300;
+}
+
+.card-primary {
+  @apply bg-white/90 dark:bg-[#151d1b] rounded-3xl p-8 shadow-sm border border-[#e4ded4] dark:border-[#c9a46a]/15 transition-all;
+}
+
+.gold-chip {
+  @apply inline-flex items-center rounded-full bg-[#c9a46a]/12 text-[#7f682f] px-3 py-1 text-[11px] font-black uppercase tracking-[0.2em];
+}
+
+.gold-glow {
+  box-shadow: 0 30px 90px rgba(201, 164, 106, 0.16);
+}
+
+/* Animaciones suaves */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+/* Input Styles */
+input, select, textarea {
+  @apply w-full bg-[#f8f6f1] dark:bg-[#111715] border border-[#e7e0d6] dark:border-[#274039] rounded-2xl p-4 text-base outline-none focus:ring-4 focus:ring-[#5b8f86]/20 transition-all dark:text-white;
+}
+
+option {
+  @apply bg-[#f8f6f1] text-[#173c36];
+}
+
+.dark option {
+  @apply bg-[#111715] text-[#f8fafc];
+}
+
+.dark .bg-white,
+.dark .bg-white\/10,
+.dark .bg-white\/20,
+.dark .bg-white\/30,
+.dark .bg-white\/40,
+.dark .bg-white\/50,
+.dark .bg-white\/60,
+.dark .bg-white\/70,
+.dark .bg-white\/80,
+.dark .bg-white\/90,
+.dark .bg-white\/95,
+.dark .bg-[#f8f6f1],
+.dark .bg-[#f3f0ea],
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark .bg-slate-200,
+.dark .bg-slate-300,
+.dark .bg-emerald-50,
+.dark .bg-red-50,
+.dark .bg-amber-50,
+.dark .bg-pink-50,
+.dark .bg-sky-50,
+.dark .bg-cyan-50
+{
+  background-color: #111715 !important;
+}
+
+.dark .bg-[#4d8b81]\/10,
+.dark .bg-emerald-900\/10,
+.dark .bg-red-900\/10,
+.dark .bg-amber-900\/20,
+.dark .bg-slate-800\/40,
+.dark .bg-white\/10,
+.dark .bg-white\/20,
+.dark .bg-white\/30,
+.dark .bg-white\/40,
+.dark .bg-white\/50
+{
+  background-color: rgba(15, 21, 22, 0.65) !important;
+}
+
+.dark .border-white\/70,
+.dark .border-slate-100,
+.dark .border-white,
+.dark .border-slate-200,
+.dark .border-slate-300,
+.dark .border-emerald-100,
+.dark .border-red-100,
+.dark .border-amber-100
+{
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.select-primary {
+  @apply w-full bg-[#f8f6f1] dark:bg-[#111715] border border-[#e7e0d6] dark:border-[#274039] rounded-2xl p-4 text-base outline-none focus:ring-4 focus:ring-[#5b8f86]/20 transition-all dark:text-white;
+}
+
+label {
+  @apply block text-xs font-black uppercase tracking-[0.2em] mb-2 text-slate-400 dark:text-slate-500;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-[#f3f0ea] dark:bg-[#111715];
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[#5b8f86]/25 rounded-full hover:bg-[#5b8f86]/45;
+}
+
+.brand-wordmark {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0;
+}
+
+.login-backdrop {
+  background:
+    linear-gradient(135deg, rgba(18, 22, 18, 0.88), rgba(27, 32, 28, 0.86)),
+    url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.dark .login-backdrop {
+  background:
+    linear-gradient(135deg, rgba(8, 11, 10, 0.92), rgba(14, 18, 16, 0.92)),
+    url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
