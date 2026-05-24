@@ -24938,12 +24938,15 @@ async function startServer() {
   app.post("/api/login", async (req, res) => {
     const { username, password } = req.body;
     const db = await getDb();
-    const user = await db.get(`
-      SELECT u.id, u.full_name, u.email, r.name as role 
-      FROM users u 
-      JOIN roles r ON u.role_id = r.id 
-      WHERE u.email = ? AND u.password_hash = ? AND u.active = 1
-    `, [username, password]);
+   const [rows]: any = await db.execute(
+  'SELECT u.id, u.full_name, u.email, u.employee_id, r.name as role '
+  + 'FROM users u '
+  + 'JOIN roles r ON u.role_id = r.id '
+  + 'WHERE u.email = ? AND u.password_hash = ? AND u.active = 1',
+  [username, password]
+);
+
+const user = rows[0];
     await db.close();
     if (user) {
       res.json({ status: "success", user: { id: user.id, username: user.full_name, role: user.role } });

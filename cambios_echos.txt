@@ -1,0 +1,21 @@
+Cambios realizados (excluyendo cambios de puerto):
+
+- Añadida la función `testPoolConnection` en `server.ts` para probar y loguear
+	la conexión al pool de MySQL al arrancar.
+- Añadidos manejadores globales de errores: `unhandledRejection` y
+	`uncaughtException` para mejorar diagnóstico en ejecución.
+- Mejor manejo de `/api/login`: validación de entrada (username/password),
+	captura de errores y respuestas claras (400/401/500). Asegura el cierre de
+	la conexión sólo si existe.
+- Envuelto `initDb()` en try/catch con logs claros y salida si la inicialización falla.
+- Hecho opcional el uso de Vite como middleware dentro de `server.ts` mediante
+	la variable `USE_VITE_MIDDLEWARE` (evita iniciar dos instancias de Vite).
+- Añadido control para inicializar/seedear la base de datos con mensajes de log
+	(las sentencias SQL de creación/tablas/seeds ya estaban, se reforzó robustez).
+- `package.json`: añadido `cross-env` en `devDependencies` y cambiado el script
+	`dev` para usar `USE_VITE_MIDDLEWARE` (permite arrancar frontend+backend juntos
+	desde `server.ts`).
+- Creado el archivo `cambios_echos.txt` (este fichero).
+
+Si quieres que incluya las líneas exactas modificadas (diff) sin los cambios de
+puerto, dímelo y lo añado.

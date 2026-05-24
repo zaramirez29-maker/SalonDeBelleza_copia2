@@ -63,7 +63,7 @@ import {
 } from 'recharts';
 
 // --- CONFIGURACIÓN DEL SISTEMA ---
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'http://localhost:3000/api';
 const EXCHANGE_RATE = 36.62; // Tipo de cambio NIO/USD (Nicaragua)
 
 const formatUsd = (value: number = 0) => `$${Number(value || 0).toFixed(2)}`;
