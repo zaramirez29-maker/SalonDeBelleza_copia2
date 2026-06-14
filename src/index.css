@@ -58,46 +58,6 @@ option {
   @apply bg-[#111715] text-[#f8fafc];
 }
 
-.dark .bg-white,
-.dark .bg-white\/10,
-.dark .bg-white\/20,
-.dark .bg-white\/30,
-.dark .bg-white\/40,
-.dark .bg-white\/50,
-.dark .bg-white\/60,
-.dark .bg-white\/70,
-.dark .bg-white\/80,
-.dark .bg-white\/90,
-.dark .bg-white\/95,
-.dark .bg-[#f8f6f1],
-.dark .bg-[#f3f0ea],
-.dark .bg-slate-50,
-.dark .bg-slate-100,
-.dark .bg-slate-200,
-.dark .bg-slate-300,
-.dark .bg-emerald-50,
-.dark .bg-red-50,
-.dark .bg-amber-50,
-.dark .bg-pink-50,
-.dark .bg-sky-50,
-.dark .bg-cyan-50
-{
-  background-color: #111715 !important;
-}
-
-.dark .bg-[#4d8b81]\/10,
-.dark .bg-emerald-900\/10,
-.dark .bg-red-900\/10,
-.dark .bg-amber-900\/20,
-.dark .bg-slate-800\/40,
-.dark .bg-white\/10,
-.dark .bg-white\/20,
-.dark .bg-white\/30,
-.dark .bg-white\/40,
-.dark .bg-white\/50
-{
-  background-color: rgba(15, 21, 22, 0.65) !important;
-}
 
 .dark .border-white\/70,
 .dark .border-slate-100,
