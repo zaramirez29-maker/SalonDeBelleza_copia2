@@ -1212,7 +1212,7 @@ function GenericSection({ title, data, icon, type, onUpdate, onDelete, onEdit, c
                        <td className="py-3">
                           <div className="flex flex-col">
                              {type === 'service' || type === 'product' ? (
-                               <span className="text-emerald-600 font-black">${item.price.toFixed(2)}</span>
+                               <span className="text-emerald-600 font-black">${Number(item.price).toFixed(2)}</span>
                              ) : type === 'employee' ? (
                                <>
                                   <span className="text-sm font-black text-[#1a3a35] dark:text-white">{item.phone || '---'}</span>
@@ -1234,7 +1234,7 @@ function GenericSection({ title, data, icon, type, onUpdate, onDelete, onEdit, c
                                <span className={`text-[10px] font-black ${item.stock <= 5 ? 'text-red-500 animate-pulse' : 'text-slate-400'}`}>
                                  {item.stock} Unid. {item.stock <= 5 && '⚠️ BAJO'}
                                </span>
-                               <span className="text-[9px] text-slate-400 opacity-60">${item.price?.toFixed(2)}</span>
+                               <span className="text-[9px] text-slate-400 opacity-60">${Number(item.price).toFixed(2)}</span>
                             </div>
                           ) : type === 'service' ? (
                             <div className="flex flex-col">
