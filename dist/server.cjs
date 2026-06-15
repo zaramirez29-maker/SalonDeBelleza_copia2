@@ -24659,6 +24659,7 @@ async function startServer() {
             throw new Error(`Stock insuficiente para ${product?.name || "producto"}`);
           }
         }
+        console.log("ITEM RECIBIDO:", JSON.stringify(item, null, 2));
         await db.run(
           `INSERT INTO sale_items
      (sale_id, item_type, item_id, appointment_id, employee_id, custom_name, quantity, unit_price, subtotal)
