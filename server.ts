@@ -726,6 +726,8 @@ async function startServer() {
       );
       const saleId = saleResult.lastID;
 
+      console.log("BODY SALES:", JSON.stringify(req.body, null, 2));
+
       for (const item of items) {
         if (item.type === 'product') {
           const product = await db.get('SELECT stock, name FROM products WHERE id = ?', [item.id]);
@@ -734,12 +736,21 @@ async function startServer() {
           }
         }
         await db.run(
-          `INSERT INTO sale_items
-             (sale_id, item_type, item_id, appointment_id, employee_id, custom_name, quantity, unit_price, subtotal)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-          [saleId, item.type, item.id, item.appointment_id || null, item.employee_id || null,
-           item.name || null, item.quantity, item.price, item.quantity * item.price]
-        );
+  `INSERT INTO sale_items
+     (sale_id, item_type, item_id, appointment_id, employee_id, custom_name, quantity, unit_price, subtotal)
+   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+  [
+    saleId,
+    item.type || 'product',
+    item.id ?? null,
+    item.appointment_id ?? null,
+    item.employee_id ?? null,
+    item.name ?? null,
+    item.quantity ?? 1,
+    item.price ?? 0,
+    (item.quantity ?? 1) * (item.price ?? 0)
+  ]
+);
         if (item.type === 'product') {
           await db.run('UPDATE products SET stock = stock - ? WHERE id = ?', [item.quantity, item.id]);
         }
