@@ -750,9 +750,16 @@ async function startServer() {
       await db.commit();
       res.status(201).json({ message: 'Venta creada con éxito', saleId });
     } catch (err: any) {
-      await db.rollback();
-      res.status(500).json({ message: 'Error al procesar la venta', error: err.message });
-    } finally {
+  console.error("ERROR SALES_DETAILED:", err);
+
+  await db.rollback();
+
+  res.status(500).json({
+    message: 'Error al procesar la venta',
+    error: err.message,
+    stack: err.stack
+  });
+} finally {
       await db.close();
     }
   });
