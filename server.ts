@@ -715,15 +715,43 @@ async function startServer() {
       const finalAppointmentId = appointment_id || appointmentItem?.appointment_id || null;
       const finalEmployeeId    = employee_id    || appointmentItem?.employee_id    || null;
 
-      const saleResult = await db.run(
-        `INSERT INTO sales
-           (client_id, created_by_id, payment_method, payment_detail, employee_id,
-            appointment_id, promotion_title, promotion_discount, discount_amount, subtotal, notes, total)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        [client_id, created_by_id, payment_method, payment_detail, finalEmployeeId,
-         finalAppointmentId, promotion_title || null, promotion_discount || 0,
-         discount_amount || 0, subtotal || total, notes, total]
-      );
+      console.log("BODY SALES:", JSON.stringify(req.body, null, 2));
+
+console.log({
+  client_id,
+  created_by_id,
+  payment_method,
+  payment_detail,
+  finalEmployeeId,
+  finalAppointmentId,
+  promotion_title,
+  promotion_discount,
+  discount_amount,
+  subtotal,
+  total,
+  notes
+});
+
+const saleResult = await db.run(
+  `INSERT INTO sales
+     (client_id, created_by_id, payment_method, payment_detail, employee_id,
+      appointment_id, promotion_title, promotion_discount, discount_amount, subtotal, notes, total)
+   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+  [
+    client_id ?? null,
+    created_by_id ?? null,
+    payment_method ?? null,
+    payment_detail ?? null,
+    finalEmployeeId ?? null,
+    finalAppointmentId ?? null,
+    promotion_title ?? null,
+    promotion_discount ?? 0,
+    discount_amount ?? 0,
+    subtotal ?? total ?? 0,
+    notes ?? null,
+    total ?? 0
+  ]
+);
       const saleId = saleResult.lastID;
 
       console.log("BODY SALES:", JSON.stringify(req.body, null, 2));
@@ -768,12 +796,9 @@ async function startServer() {
 
   res.status(500).json({
     message: 'Error al procesar la venta',
-    error: err.message,
-    stack: err.stack
+    error: err.message
   });
-} finally {
-      await db.close();
-    }
+}
   });
 
   // -------------------------------------------------------
