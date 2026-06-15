@@ -1576,9 +1576,11 @@ function FormRouter({ type, onSuccess, initialData, clients, employees, services
       }
     }
 
-    const method = initialData ? 'PUT' : 'POST';
-    let url = initialData ? `${API_URL}/${type}s/${initialData.id}` : `${API_URL}/${type}s`;
-    if (type === 'sale' && !initialData) url = `${API_URL}/sales_detailed`;
+    const isEdit = Boolean(initialData?.id);
+const method = isEdit ? 'PUT' : 'POST';
+let url = isEdit ? `${API_URL}/${type}s/${initialData.id}` : `${API_URL}/${type}s`;
+
+if (type === 'sale' && !isEdit) url = `${API_URL}/sales_detailed`;
 
     try {
       const body = { ...formData };
