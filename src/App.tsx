@@ -146,9 +146,44 @@ const ReceiptPrinter = ({ sale }: { sale: any }) => {
                 <span className="block text-[7px] uppercase opacity-60">{item.item_type === 'product' ? 'Producto' : item.item_type === 'service' ? 'Servicio' : item.item_type || 'Detalle'}</span>
                 {item.employee_name && <span className="block text-[7px] uppercase opacity-60">Atendio: {item.employee_name}</span>}
               </td>
-              <td className="py-1 text-right">${(item.unit_price || item.price || 0).toFixed(2)}</td>
-              <td className="py-1 text-right">${((item.quantity || 1) * (item.unit_price || item.price || 0)).toFixed(2)}</td>
-            </tr>
+             <tbody>
+  {sale.items?.map((item: any, idx: number) => {
+    const cantidad = Number(item.quantity || 1);
+    const unitPrice = Number(item.unit_price ?? item.price ?? 0);
+    const totalLine = cantidad * unitPrice;
+
+    return (
+      <tr key={idx}>
+        <td className="py-1">{cantidad}</td>
+        <td className="py-1">
+          <span>{getSaleItemName(item)}</span>
+          <span className="block text-[7px] uppercase opacity-60">
+            {item.item_type === 'product'
+              ? 'Producto'
+              : item.item_type === 'service'
+                ? 'Servicio'
+                : item.item_type || 'Detalle'}
+          </span>
+          {item.employee_name && (
+            <span className="block text-[7px] uppercase opacity-60">
+              Atendio: {item.employee_name}
+            </span>
+          )}
+        </td>
+        <td className="py-1 text-right">${unitPrice.toFixed(2)}</td>
+        <td className="py-1 text-right">${totalLine.toFixed(2)}</td>
+      </tr>
+    );
+  })}
+  {!sale.items?.length && (
+    <tr>
+      <td colSpan={4} className="py-2 text-center text-slate-400">
+        No hay descripción de items disponibles.
+      </td>
+    </tr>
+  )}
+</tbody>
+</tr>
           ))}
           {!sale.items?.length && (
             <tr>
@@ -533,9 +568,9 @@ export default function App() {
     doc.setFont('helvetica', 'normal');
     (sale.items || []).forEach((item: any, idx: number) => {
       const cantidad = item.quantity || 1;
-      const unitPrice = item.unit_price || item.price || 0;
-      const totalLine = cantidad * unitPrice;
-      doc.text(`${cantidad}`, margin, y);
+      const unitPrice = Number(item.unit_price || item.price || 0);
+const totalLine = Number(cantidad) * unitPrice;
+doc.text(`${cantidad}`, margin, y);
       const description = item.item_name || item.name || item.item_type || 'Item';
       const itemLabel = `${item.item_type ? `${item.item_type === 'product' ? 'Producto' : item.item_type === 'service' ? 'Servicio' : item.item_type}: ` : ''}${description}${item.employee_name ? ` - Atendio: ${item.employee_name}` : ''}`;
       const descLines = doc.splitTextToSize(itemLabel, 220);
@@ -1250,7 +1285,9 @@ function GenericSection({ title, data, icon, type, onUpdate, onDelete, onEdit, c
                             </div>
                           ) : type === 'sale' ? (
                              <div className="flex flex-col gap-1">
-                                <span className="text-sm font-black text-emerald-600">${item.total.toFixed(2)}</span>
+                               <span className="text-sm font-black text-emerald-600">
+  ${Number(item.total || 0).toFixed(2)}
+</span>
                                 <div className="space-y-0.5">
                                    {item.items?.map((detail: any, idx: number) => (
                                       <div key={idx} className="flex items-center gap-1.5 text-[8px] font-bold text-slate-400 leading-none">
@@ -1405,12 +1442,16 @@ function ReportesSection({ stats, sales }: any) {
                 <div className="flex flex-col justify-center h-full space-y-6">
                    <div className="p-6 bg-slate-50 dark:bg-slate-800 rounded-3xl">
                       <p className="text-[10px] font-black uppercase text-slate-400 mb-1">Total Histórico</p>
-                      <h3 className="text-4xl font-black text-[#4d8b81]">${(sales?.reduce((acc: any, curr: any) => acc + curr.total, 0) || 0).toFixed(2)}</h3>
+                      <h3 className="text-4xl font-black text-[#4d8b81]">
+  ${(Number(sales?.reduce((acc: any, curr: any) => acc + Number(curr.total || 0), 0) || 0)).toFixed(2)}
+</h3>
                    </div>
                    <div className="grid grid-cols-2 gap-4">
                       <div className="p-4 border-2 border-slate-50 dark:border-slate-800 rounded-2xl">
                          <p className="text-[9px] font-black uppercase text-slate-400">Promedio Ticket</p>
-                         <p className="text-xl font-black">${(sales?.length > 0 ? sales.reduce((a:any,c:any)=>a+c.total,0)/sales.length : 0).toFixed(2)}</p>
+                         <p className="text-xl font-black">
+  ${(Number(sales?.length > 0 ? sales.reduce((a:any,c:any)=>a + Number(c.total || 0),0)/sales.length : 0)).toFixed(2)}
+</p>
                       </div>
                       <div className="p-4 border-2 border-slate-50 dark:border-slate-800 rounded-2xl">
                          <p className="text-[9px] font-black uppercase text-slate-400">Total Transacciones</p>
